@@ -1,0 +1,37 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Register
+  // Ensure correct linking of CSS
+  link(rel='stylesheet' href='/css/signup.css')
+.container
+  h2 Register
+  form(action='/signup' method='post')
+    // Firstname with Placeholder
+    label(for='firstname') Firstname:
+    input#firstname(type='text' name='fname' placeholder='Enter your first name')
+    // Lastname with Placeholder
+    label(for='lastname') Lastname:
+    input#lastname(type='text' name='lname' placeholder='Enter your last name')
+    label(for='phone') Phone number:
+    input#phone(type='text' name='phone' placeholder='Enter your phone number')
+    label(for='email') Email:
+    input#email(type='email' name='email' placeholder='Enter your email address')
+    label(for='gender') Gender:
+    select#gender(name='gender')
+      option(value='' disabled='' selected='') Select your role
+      option(value='female') Female
+      option(value='male') Male
+    label#Address(for='address') Address:
+    select#role(name='role')
+      option(value='' disabled='' selected='') Select your role
+      option(value='director') Director
+    label(for='registerPassword') Password:
+    input#registerPassword(type='password' name='password' placeholder='Create a strong password')
+    button(type='submit') Register 
+  p.signup-link
+    | Have an account? 
+    a(href='/login') Login here
+    | .
+  //- script(src='/js/signup.js')

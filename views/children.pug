@@ -1,0 +1,43 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Learners Registration Form
+    link(rel='stylesheet', href='/css/children.css')
+  body
+    .container
+      h2 Learners Registration Form
+      p Enter the details of the first learner.
+      form(action='/addChild' method='post')
+        label(for='firstName') First Name
+        input#firstName(type='text' name='firstName' placeholder='Enter first name')
+
+        label(for='lastName') Last Name
+        input#lastName(type='text' name='lastName' placeholder='Enter last name')
+
+        label(for='age') Age
+        input#age(type='number' name='age' placeholder='Enter age')
+
+        label(for='class') Class
+        select#class(name='class')
+          option(value='') Select a class
+          option(value='Baby') Baby
+          option(value='Middle') Middle
+          option(value='Top') Top
+
+        label(for='parentName') Parent / Guardian Name
+        input#parentName(type='text' name='parentName' placeholder='Enter parent name')
+
+        label(for='phoneNumber') Phone Number
+        input#phoneNumber(type='text' name='phoneNumber' placeholder='Enter phone number')
+
+        label(for='residence') Residence
+        input#residence(type='text' name='residence' placeholder='Enter residence')
+
+        button(type='submit') Register Learner
+
+      p#successMessage.success-message
+
+    //- Uncomment below to include JavaScript when ready
+    // script(src='/js/produce.js')

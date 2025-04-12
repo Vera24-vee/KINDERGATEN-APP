@@ -1,0 +1,31 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Director Dashboard
+  link(rel='stylesheet' href='/css/dash.css')
+.dashboard-container
+  aside.sidebar
+    h2 Director Dashboard
+    ul
+      li
+        a(href='/addChild') Register Child
+      li
+        a(href='/childtable') Children Table
+      li
+        a(href='/') logout
+  main.main-content
+    header
+      h1 Welcome, Admin
+    section.overview
+      .card
+        h3 Total Children
+        p
+          | NUMBERS
+          span#total-children 0
+      .card
+        h3 TURN UP
+        #market-trends
+    
+
+script(src='js/director.js')

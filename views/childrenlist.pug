@@ -1,0 +1,45 @@
+doctype html
+html
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Children List
+    link(rel="stylesheet", href="/css/list.css")
+  body
+    header
+      h1 Children List 
+
+    main
+      if children.length
+        table
+          thead
+            tr
+              th First Name
+              th Last Name
+              th Age
+              th Class
+              th Parent Name
+              th Phone Number 
+              th Residence
+              th Date
+              th Update
+              th Delete  
+          tbody
+            each child in children
+              tr
+                td #{child.firstName}
+                td #{child.lastName}
+                td #{child.age}
+                td #{child.class}
+                td #{child.parentName}
+                td #{child.phoneNumber}
+                td #{child.residence}
+                td #{moment(child.createdAt).format("DD-MM-YYYY")}
+                td
+                  a(href="/updateChild?id=" + child._id) Update
+                td 
+                  form(action="/deleteChild" method="post")
+                    input(type="hidden" name="id" value=child._id)
+                    button(type="submit") Delete
+      else
+        p No child records found.

@@ -1,0 +1,39 @@
+doctype html
+html
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Update Learner
+    link(rel="stylesheet", href="/css/children.css")
+  body
+    .container
+      h2 Update Child Form
+      p Enter the updated details for the learner.
+
+      form(action='/updateChild?id=' + child._id, method='post')
+        label(for='firstName') First Name
+        input#firstName(type='text', name='firstName', value=child.firstName, required)
+
+        label(for='lastName') Last Name
+        input#lastName(type='text', name='lastName', value=child.lastName, required)
+
+        label(for='age') Age
+        input#age(type='number', name='age', value=child.age, required)
+
+        label(for='class') Class
+        select#class(name='class', required)
+          option(value='') Select a class
+          option(value='Baby', selected=child.class === 'Baby') Baby
+          option(value='Middle', selected=child.class === 'Middle') Middle
+          option(value='Top', selected=child.class === 'Top') Top
+
+        label(for='parentName') Parent / Guardian Name
+        input#parentName(type='text', name='parentName', value=child.parentName, required)
+
+        label(for='phoneNumber') Phone Number
+        input#phoneNumber(type='text', name='phoneNumber', value=child.phoneNumber, required)
+
+        label(for='residence') Residence
+        input#residence(type='text', name='residence', value=child.residence, required)
+
+        button(type='submit') Update Learner

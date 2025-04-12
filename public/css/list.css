@@ -1,0 +1,82 @@
+/* styles.css */
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #1b1b1b; /* Minimal Black */
+    line-height: 1.5;
+  }
+  
+  body {
+    background-color: #f9f9f9; /* Very light background */
+    padding: 20px;
+  }
+  
+  /* Header */
+  header h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #599e89; /* Dirty Green */
+  }
+  
+  /* Table Styles */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  th, td {
+    padding: 12px 15px;
+    text-align: left;
+  }
+  
+  thead {
+    background-color: #1b4d3e; /* Dirty Green */
+    color: white;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  tbody tr:hover {
+    background-color: #e1f0e1; /* Light minimal green */
+  }
+  
+  /* Update and Delete Links & Buttons */
+  a {
+    color: #1b4d3e;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  form {
+    display: inline;
+  }
+  
+  button {
+    background-color: #c0392b; /* Muted red for delete */
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #a93226;
+  }
+  

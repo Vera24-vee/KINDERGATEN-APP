@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fdfdfd;
+    color: #1a1a1a;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    color: #2e4d2c; /* Dirty Green */
+    margin-bottom: 10px;
+  }
+  
+  p {
+    text-align: center;
+    color: #555;
+    margin-bottom: 30px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 6px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  input {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+  }
+  
+  input:focus {
+    border-color: #3a5f3a; /* Minimal Green */
+    outline: none;
+  }
+  
+  button {
+    background-color: #3a5f3a; /* Minimal Green */
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #2e4d2c; /* Darker Dirty Green */
+  }
+  

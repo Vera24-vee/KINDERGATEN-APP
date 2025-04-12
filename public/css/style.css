@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  color: #1b1b1b;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+header {
+  background-color: #1b4d3e;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-size: 1.8rem;
+  color: white;
+  font-weight: bold;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #cce5db;
+}
+
+/* Hero Section */
+main.hero {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 40px;
+  flex: 1;
+  background: linear-gradient(to right, #ffffff, #e8f5f0);
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #1b4d3e;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #444;
+}
+
+.buttons a.cta-button {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-right: 15px;
+  font-size: 1rem;
+}
+
+a.cta-button {
+  background-color: #1b4d3e;
+  color: white;
+}
+
+a.cta-button.secondary {
+  background-color: white;
+  color: #1b4d3e;
+  border: 2px solid #1b4d3e;
+}
+
+a.cta-button:hover {
+  background-color: #14503d;
+}
+
+a.cta-button.secondary:hover {
+  background-color: #e0f3ec;
+}
+
+/* Hero Image */
+.hero-img img {
+  max-width: 500px;
+  width: 100%;
+}
+
+/* Footer */
+footer {
+  background-color: #f0f0f0;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: #555;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  main.hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-img {
+    margin-top: 30px;
+  }
+}
