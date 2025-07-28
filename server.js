@@ -68,6 +68,11 @@ app.use("/child", childRoutes);
 app.use("/auth", authRoutes);
 app.use("/admin", adminRoutes);
 
+// Root route - render the landing page
+app.get("/", (req, res) => {
+  res.render("index");
+});
+
 //redirection to unavailable page
 app.get("*", (req, res) => {
   res.send("oops! page not found");
