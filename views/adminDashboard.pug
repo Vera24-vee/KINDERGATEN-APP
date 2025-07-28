@@ -9,11 +9,11 @@ head
     h2 Director Dashboard
     ul
       li
-        a(href='/addChild') 📝 Register Child
+        a(href='/child/addChild') 📝 Register Child
       li
-        a(href='/childtable') 👶 Children Table
+        a(href='/child/childtable') 👶 Children Table
       li
-        a(href='/') 🚪 Logout
+        a(href='/auth/logout') 🚪 Logout
   main.main-content
     header
       h1 Welcome, #{user ? user.fname : 'Admin'}!
@@ -26,6 +26,3 @@ head
       .card(style='margin-bottom: 24px;')
         h3 TURN UP
         #market-trends
-    
-
-script(src='js/director.js')

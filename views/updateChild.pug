@@ -10,7 +10,7 @@ html
       h2 Update Child Form
       p Enter the updated details for the learner.
 
-      form(action='/updateChild?id=' + child._id, method='post')
+      form(action='/child/updateChild?id=' + child._id, method='post')
         label(for='firstName') First Name
         input#firstName(type='text', name='firstName', value=child.firstName, required)
 

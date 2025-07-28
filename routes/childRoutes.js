@@ -61,7 +61,7 @@ router.get("updateChild", async (req, res) => {
 router.post("updateChild", async (req, res) => {
   try {
     await Child.findByIdAndUpdate(req.query.id, req.body);
-    res.redirect("/childtable");
+    res.redirect("/child/childtable");
   } catch (error) {
     res.status(400).send("Unable to update child in the database.");
   }
@@ -73,7 +73,7 @@ router.post(
   async (req, res) => {
     try {
       await Child.deleteOne({ _id: req.body.id });
-      res.redirect("/childtable");
+      res.redirect("/child/childtable");
     } catch (error) {
       res.status(400).send("unable to delete child in the db");
     }

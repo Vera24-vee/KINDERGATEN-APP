@@ -36,9 +36,9 @@ html
                 td #{child.residence}
                 td #{moment(child.createdAt).format("DD-MM-YYYY")}
                 td
-                  a(href="/updateChild?id=" + child._id) Update
+                  a(href="/child/updateChild?id=" + child._id) Update
                 td 
-                  form(action="/deleteChild" method="post")
+                  form(action="/child/deleteChild" method="post")
                     input(type="hidden" name="id" value=child._id)
                     button(type="submit") Delete
       else
