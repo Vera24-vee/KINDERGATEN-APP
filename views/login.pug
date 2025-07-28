@@ -10,7 +10,7 @@ head
   p Please enter your credentials to log in.
   if error
     p.error-message(style='color: red;') #{error}
-  form(action='/login' method='post')
+  form(action='/auth/login' method='post')
     label(for='username') Email:
     input#email(type='text' name='email' placeholder='Enter your email')
     label(for='password') Password:
@@ -18,5 +18,5 @@ head
     button(type='submit') Log In
   p.signup-link
     | Don't have an account? 
-    a(href='/signup') Sign up here
+    a(href='/auth/signup') Sign up here
     | .

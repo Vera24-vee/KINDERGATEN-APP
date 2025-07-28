@@ -7,7 +7,7 @@ head
   link(rel='stylesheet' href='/css/signup.css')
 .container
   h2 Register
-  form(action='/signup' method='post')
+  form(action='/auth/signup' method='post')
     // Firstname with Placeholder
     label(for='firstname') Firstname:
     input#firstname(type='text' name='fname' placeholder='Enter your first name')
@@ -34,7 +34,7 @@ head
     button(type='submit') Register 
   p.signup-link
     | Have an account? 
-    a(href='/login') Login here
+    a(href='/auth/login') Login here
     | .
   if error
     p.error-message(style='color: red;') #{error}
