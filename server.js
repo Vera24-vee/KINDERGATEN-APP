@@ -3,7 +3,7 @@ const express = require("express");
 const path = require("path");
 const mongoose = require("mongoose");
 const passport = require("passport");
-const moment =require("moment")
+const moment = require("moment");
 const expressSession = require("express-session")({
   secret: process.env.SESSION_SECRET,
   resave: false,
@@ -25,7 +25,6 @@ const PORT = process.env.PORT || 3333;
 const childRoutes = require("./routes/childRoutes");
 const authRoutes = require("./routes/authRoutes");
 const adminRoutes = require("./routes/adminRoutes");
-
 
 //3. configurations
 //setting up how it should connect(connecting to what is in your .env file)
@@ -70,7 +69,13 @@ app.use("/admin", adminRoutes);
 
 // Root route - render the landing page
 app.get("/", (req, res) => {
-  res.render("index");
+  console.log("Root route accessed");
+  try {
+    res.render("index");
+  } catch (error) {
+    console.error("Error rendering index:", error);
+    res.status(500).send("Error rendering page");
+  }
 });
 
 //redirection to unavailable page
