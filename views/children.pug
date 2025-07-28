@@ -37,7 +37,10 @@ html
 
         button(type='submit') Register Learner
 
-      p#successMessage.success-message
+      if error
+        p.error-message(style='color: red;') #{error}
+      if success
+        p.success-message(style='color: green;') #{success}
 
     //- Uncomment below to include JavaScript when ready
     // script(src='/js/produce.js')

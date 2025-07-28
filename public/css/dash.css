@@ -80,3 +80,23 @@ header h1 {
     min-width: 200px;
     max-width: 300px;
   }
+
+@media (max-width: 900px) {
+  .sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+  }
+  .main-content {
+    margin-left: 0;
+    padding: 20px 5px;
+  }
+  .dashboard-container {
+    flex-direction: column;
+  }
+}

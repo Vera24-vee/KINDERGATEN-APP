@@ -20,10 +20,12 @@ head
     input#email(type='email' name='email' placeholder='Enter your email address')
     label(for='gender') Gender:
     select#gender(name='gender')
-      option(value='' disabled='' selected='') Select your role
+      option(value='' disabled='' selected='') Select your gender
       option(value='female') Female
       option(value='male') Male
-    label#Address(for='address') Address:
+    label(for='address') Address:
+    input#address(type='text' name='address' placeholder='Enter your address')
+    label(for='role') Role:
     select#role(name='role')
       option(value='' disabled='' selected='') Select your role
       option(value='director') Director
@@ -34,4 +36,8 @@ head
     | Have an account? 
     a(href='/login') Login here
     | .
+  if error
+    p.error-message(style='color: red;') #{error}
+  if success
+    p.success-message(style='color: green;') #{success}
   //- script(src='/js/signup.js')

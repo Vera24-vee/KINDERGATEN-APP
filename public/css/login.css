@@ -98,4 +98,14 @@
   .signup-link a:hover {
     text-decoration: underline;
   }
+
+@media (max-width: 600px) {
+  .login-container {
+    padding: 20px 10px;
+    max-width: 95vw;
+  }
+  form label, form input, form button {
+    font-size: 0.95rem;
+  }
+}
   

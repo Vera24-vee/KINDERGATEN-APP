@@ -5,19 +5,21 @@ const mongoose = require("mongoose");
 const passport = require("passport");
 const moment =require("moment")
 const expressSession = require("express-session")({
-  secret: "secret",
+  secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: false,
 });
 
 require("dotenv").config();
 
+// Make sure to set SESSION_SECRET and DATABASE in your .env file
+
 //import users model
 const Signup = require("./models/Signup"); // Assuming Signup.js is in the models folder
 
 //2. instantiations
 const app = express();
-const PORT = 3333;
+const PORT = process.env.PORT || 3333;
 
 //import routes
 const childRoutes = require("./routes/childRoutes");
@@ -62,12 +64,9 @@ passport.deserializeUser(Signup.deserializeUser());
 
 //5. routes
 //using imported routes
-app.use("/", childRoutes);
-app.use("/", authRoutes);
-app.use("/", adminRoutes);
-
-
-
+app.use("/child", childRoutes);
+app.use("/auth", authRoutes);
+app.use("/admin", adminRoutes);
 
 //redirection to unavailable page
 app.get("*", (req, res) => {

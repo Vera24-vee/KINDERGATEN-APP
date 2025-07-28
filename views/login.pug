@@ -8,6 +8,8 @@ head
 .login-container
   h1 Login
   p Please enter your credentials to log in.
+  if error
+    p.error-message(style='color: red;') #{error}
   form(action='/login' method='post')
     label(for='username') Email:
     input#email(type='text' name='email' placeholder='Enter your email')
