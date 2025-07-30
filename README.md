@@ -33,17 +33,9 @@ A comprehensive kindergarten management system built with Node.js, Express, and 
    ```
 
 3. **Set up environment variables**
-   Create a `.env` file in the root directory:
-
-   ```
-   DATABASE=your-mongodb-connection-string
-   SESSION_SECRET=your-session-secret-here
-   PORT=3333
-   NODE_ENV=development
-   ```
+   Create a `.env` file in the root directory with your database connection string and session secret.
 
    **⚠️ Security Note**:
-
    - Never commit your `.env` file to version control
    - Never share or expose your database credentials
    - Use strong, unique secrets for production
@@ -92,11 +84,7 @@ A comprehensive kindergarten management system built with Node.js, Express, and 
    - **Start Command**: `npm start`
 
 4. **Set Environment Variables**
-   In the Render dashboard, go to your service → Environment → Add the following:
-
-   - `DATABASE`: Your MongoDB connection string (keep this secure!)
-   - `SESSION_SECRET`: A secure random string for session management
-   - `NODE_ENV`: `production`
+   In the Render dashboard, go to your service → Environment → Add your database connection string and session secret.
 
    **🔒 Security**: Never expose your database credentials in code or documentation.
 
