@@ -36,13 +36,18 @@ A comprehensive kindergarten management system built with Node.js, Express, and 
    Create a `.env` file in the root directory:
 
    ```
-   DATABASE=mongodb://localhost:27017/kindergarten
-   SESSION_SECRET=your-super-secret-session-key-here
+   DATABASE=your-mongodb-connection-string
+   SESSION_SECRET=your-session-secret-here
    PORT=3333
    NODE_ENV=development
    ```
 
-   **⚠️ Security Note**: Never commit your `.env` file to version control. Make sure it's listed in your `.gitignore` file.
+   **⚠️ Security Note**:
+
+   - Never commit your `.env` file to version control
+   - Never share or expose your database credentials
+   - Use strong, unique secrets for production
+   - Make sure `.env` is listed in your `.gitignore` file
 
 4. **Start the development server**
 
@@ -64,7 +69,7 @@ A comprehensive kindergarten management system built with Node.js, Express, and 
 
 1. Go to [MongoDB Atlas](https://www.mongodb.com/atlas)
 2. Create a free account and cluster
-3. Get your connection string (it looks like: `mongodb+srv://your-username:your-password@your-cluster.mongodb.net/your-database`)
+3. Get your connection string from the MongoDB Atlas dashboard
 
 ### Step 2: Deploy on Render
 
@@ -89,9 +94,11 @@ A comprehensive kindergarten management system built with Node.js, Express, and 
 4. **Set Environment Variables**
    In the Render dashboard, go to your service → Environment → Add the following:
 
-   - `DATABASE`: Your MongoDB connection string
-   - `SESSION_SECRET`: A random string for session security
+   - `DATABASE`: Your MongoDB connection string (keep this secure!)
+   - `SESSION_SECRET`: A secure random string for session management
    - `NODE_ENV`: `production`
+
+   **🔒 Security**: Never expose your database credentials in code or documentation.
 
 5. **Deploy**
    - Click "Create Web Service"
