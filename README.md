@@ -37,9 +37,12 @@ A comprehensive kindergarten management system built with Node.js, Express, and 
 
    ```
    DATABASE=mongodb://localhost:27017/kindergarten
-   SESSION_SECRET=your-secret-key
+   SESSION_SECRET=your-super-secret-session-key-here
    PORT=3333
+   NODE_ENV=development
    ```
+
+   **⚠️ Security Note**: Never commit your `.env` file to version control. Make sure it's listed in your `.gitignore` file.
 
 4. **Start the development server**
 
@@ -61,7 +64,7 @@ A comprehensive kindergarten management system built with Node.js, Express, and 
 
 1. Go to [MongoDB Atlas](https://www.mongodb.com/atlas)
 2. Create a free account and cluster
-3. Get your connection string (it looks like: `mongodb+srv://username:password@cluster.mongodb.net/database`)
+3. Get your connection string (it looks like: `mongodb+srv://your-username:your-password@your-cluster.mongodb.net/your-database`)
 
 ### Step 2: Deploy on Render
 
